@@ -1,0 +1,60 @@
+{
+    "tracks": [
+        {
+            "trackId": 0,
+            "trackType": "STANDARD_TRACK",
+            "instrument": "flute",
+            "density": "DENSITY_ANY",
+            "selectedBars": [
+                false,
+                false,
+                false,
+                false
+            ],
+            "polyphonyHardLimit": 10,
+            "temperature": 1
+        },
+        {
+            "trackId": 1,
+            "trackType": "STANDARD_TRACK",
+            "instrument": "acoustic_grand_piano",
+            "density": "DENSITY_ANY",
+            "selectedBars": [
+                false,
+                false,
+                false,
+                false
+            ],
+            "polyphonyHardLimit": 10,
+            "temperature": 1
+        },
+        {
+            "trackId": 2,
+            "trackType": "STANDARD_TRACK",
+            "instrument": "flute",
+            "density": "DENSITY_ANY",
+            "selectedBars": [
+                false,
+                false,
+                false,
+                false
+            ],
+            "polyphonyHardLimit": 10,
+            "temperature": 1
+        },
+        {
+            "trackId": 3,
+            "trackType": "STANDARD_TRACK",
+            "instrument": "flute",
+            "density": "DENSITY_ANY",
+            "selectedBars": [
+                false,
+                false,
+                false,
+                false
+            ],
+            "polyphonyHardLimit": 10,
+            "temperature": 1
+        }
+    ]
+}

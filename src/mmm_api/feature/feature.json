@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "density",
+    "return_type" : "vector<tuple<int,int,int>>"
+  },
+  {
+    "name" : "test",
+    "return_type" : "vector<double>"
+  }
+]

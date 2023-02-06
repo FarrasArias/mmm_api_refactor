@@ -1,0 +1,235 @@
+{
+    "tracks": [
+        {
+            "bars": [
+                {
+                    "events": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        8,
+                        9,
+                        10,
+                        11
+                    ],
+                    "beatLength": 4
+                },
+                {
+                    "events": [
+                        4,
+                        5,
+                        6,
+                        7
+                    ],
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                }
+            ],
+            "isDrum": false,
+            "instrument": 13,
+            "type": 10
+        },
+        {
+            "bars": [
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                }
+            ],
+            "isDrum": false,
+            "instrument": 79,
+            "type": 10
+        },
+        {
+            "bars": [
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                }
+            ],
+            "isDrum": true,
+            "instrument": 79,
+            "type": 11
+        },
+        {
+            "bars": [
+                {
+                    "events": [
+                        16,
+                        17
+                    ],
+                    "beatLength": 4
+                },
+                {
+                    "events": [
+                        14
+                    ],
+                    "beatLength": 4
+                },
+                {
+                    "events": [
+                        15,
+                        18,
+                        19
+                    ],
+                    "beatLength": 4
+                },
+                {
+                    "events": [
+                        12,
+                        13
+                    ],
+                    "beatLength": 4
+                }
+            ],
+            "isDrum": true,
+            "instrument": 6,
+            "type": 10
+        },
+        {
+            "bars": [
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                },
+                {
+                    "beatLength": 4
+                }
+            ],
+            "isDrum": false,
+            "instrument": 8,
+            "type": 10
+        }
+    ],
+    "events": [
+        {
+            "velocity": 100,
+            "pitch": 55,
+            "time": 24
+        },
+        {
+            "velocity": 0,
+            "pitch": 55,
+            "time": 27
+        },
+        {
+            "velocity": 100,
+            "pitch": 58,
+            "time": 27
+        },
+        {
+            "velocity": 0,
+            "pitch": 58,
+            "time": 42
+        },
+        {
+            "velocity": 100,
+            "pitch": 58,
+            "time": 42
+        },
+        {
+            "velocity": 0,
+            "pitch": 58,
+            "time": 45
+        },
+        {
+            "velocity": 100,
+            "pitch": 60,
+            "time": 33
+        },
+        {
+            "velocity": 0,
+            "pitch": 60,
+            "time": 36
+        },
+        {
+            "velocity": 92,
+            "pitch": 61,
+            "time": 12
+        },
+        {
+            "velocity": 0,
+            "pitch": 61,
+            "time": 15
+        },
+        {
+            "velocity": 100,
+            "pitch": 61,
+            "time": 18
+        },
+        {
+            "velocity": 0,
+            "pitch": 61,
+            "time": 21
+        },
+        {
+            "velocity": 100,
+            "pitch": 66,
+            "time": 27
+        },
+        {
+            "velocity": 0,
+            "pitch": 66,
+            "time": 45
+        },
+        {
+            "velocity": 100,
+            "pitch": 67,
+            "time": 21
+        },
+        {
+            "velocity": 0,
+            "pitch": 67,
+            "time": 6
+        },
+        {
+            "velocity": 100,
+            "pitch": 68,
+            "time": 39
+        },
+        {
+            "velocity": 0,
+            "pitch": 68,
+            "time": 42
+        },
+        {
+            "velocity": 100,
+            "pitch": 70,
+            "time": 27
+        },
+        {
+            "velocity": 0,
+            "pitch": 70,
+            "time": 45
+        }
+    ],
+    "resolution": 12,
+    "tempo": 120
+}

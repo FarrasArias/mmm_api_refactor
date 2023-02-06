@@ -1,0 +1,13 @@
+{
+    "tracks_per_step": 4,
+    "bars_per_step": 4,
+    "model_dim": 4,
+    "percentage": 100,
+    "batch_size": 1,
+    "temperature": 1.0,
+    "max_steps": 0,
+    "polyphony_hard_limit": 6,
+    "shuffle": false,
+    "verbose": true,
+    "ckpt": "/users/jeff/CODE/MMM_TRAINING/models/el_yellow_ts.pt"
+}

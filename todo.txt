@@ -1,0 +1,27 @@
+RECENT CHANGES
+
+1. added namespace for codebase (mmm)
+2.  fix the event ordering issue with new duration encoding (make sure offsets are in proper bar)
+
+TODO
+
+1. make sure status always overrides attributes in piece for tracks that are being resampled (instrument, density).
+- check for cases in bar-infilling when there is an ambiguous attribute selected (i.e. a mask over an attribute). This is only allowed in resample mode.
+
+write a function in the encoder base class
+
+a) INFILLING :: if any analytic feature (density, note duration quantile etc) is set to NONE. Then we must pre-process and update corresponding fields. 
+
+b) AUTOREG :: if any analytic feature is set to NONE in autoregressive mode then we let the model determine this value and we never need to pre-process
+
+2. how to support different encoding schemes on different tracks
+- just add another field to encoder config
+
+
+
+/////
+
+there is a bug when model dim is larger than number of bars in the piece
+we have to pad this in the pad_piece_with_status function
+
+note that we also have to fix the issue with adding STANDARD_TRACK in cases where OPZ is being used.

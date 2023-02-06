@@ -1,0 +1,38 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.8.2 FATAL_ERROR)
+PROJECT(mmm_api)
+
+SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+SET(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+add_definitions(-DPYBIND=1)
+ADD_SUBDIRECTORY(pybind11)
+
+INCLUDE_DIRECTORIES(midifile/include)
+FILE(GLOB MIDIFILE_SRCS "midifile/src/*.cpp")
+FILE(GLOB MIDIFILE_HDRS "midifile/src/*.cpp")
+ADD_LIBRARY(midifile STATIC ${MIDIFILE_SRCS} ${MIDIFILE_HDRS})
+
+INCLUDE(FindProtobuf)
+FIND_PACKAGE(Protobuf REQUIRED)
+INCLUDE_DIRECTORIES(${Protobuf_INCLUDE_DIRS})
+#PROTOBUF_GENERATE_CPP(PROTO_SRC PROTO_HEADER src/mmm_api/protobuf/midi.proto)
+FILE(GLOB PROTO_DEF "src/mmm_api/protobuf/*.proto")
+PROTOBUF_GENERATE_CPP(PROTO_SRC PROTO_HEADER ${PROTO_DEF})
+ADD_LIBRARY(proto ${PROTO_HEADER} ${PROTO_SRC})
+
+SET(TORCH_FOLDER /content/libtorch)
+ADD_LIBRARY(torch SHARED IMPORTED)
+set_target_properties(
+    torch PROPERTIES IMPORTED_LOCATION ${TORCH_FOLDER}/lib/libtorch.so)
+INCLUDE_DIRECTORIES(${TORCH_FOLDER}/include)
+INCLUDE_DIRECTORIES(${TORCH_FOLDER}/include/torch/csrc/api/include)
+FILE(GLOB TORCH_DLLS "${TORCH_FOLDER}/lib/*.so")
+
+PYBIND11_ADD_MODULE(mmm_api 
+    src/mmm_api/lib.cpp
+    src/mmm_api/dataset/lz4.c 
+    src/mmm_api/protobuf/midi.pb.cc)
+
+TARGET_LINK_LIBRARIES(
+    mmm_api PRIVATE midifile proto ${Protobuf_LIBRARIES} ${TORCH_DLLS})

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mmm_api" tests="11" errors="0" failures="0" skip="10">
+  <testcase name="dev" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_time_sig_mismatch" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_single_step" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_infill" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_infill_w_model" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_autoreg" time="14.62">
+  </testcase>
+  <testcase name="test_random_status" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="opz_test" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_polyphony" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_duration" time="0.00">
+    <skipped />
+  </testcase>
+  <testcase name="test_density" time="0.00">
+    <skipped />
+  </testcase>
+</testsuite>

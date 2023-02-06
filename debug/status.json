@@ -1,0 +1,48 @@
+{
+	"tracks" : [ 		{
+			"trackId" : 0,
+			"trackType" : 10,
+			"instrument" : "Xylophone",
+			"density" : 1,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 1,
+			"trackType" : 10,
+			"instrument" : "Ocarina",
+			"density" : 2,
+			"selectedBars" : [ true, true, true, true ],
+			"resample" : true,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 2,
+			"trackType" : 11,
+			"instrument" : "drum_79",
+			"density" : 2,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 3,
+			"trackType" : 10,
+			"instrument" : "Harpsichord",
+			"density" : 4,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 4,
+			"trackType" : 10,
+			"instrument" : "Celesta",
+			"density" : 5,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+ ]
+}

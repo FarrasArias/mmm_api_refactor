@@ -1,0 +1,11 @@
+requirements
+============
+
+torch==1.6.0 // installed via pip
+protobuf 3.12.2
+
+notes
+=====
+
+in the build script (build.sh) I assume that your python3 is aliased as python3. If it is not the line 'cmake -DCMAKE_PREFIX_PATH=`python3 -c 'import torch;print(torch.utils.cmake_prefix_path)'` ..' will cause issues.
+

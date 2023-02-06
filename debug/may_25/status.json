@@ -1,0 +1,66 @@
+{
+	"tracks" : [ 		{
+			"trackId" : 0,
+			"trackType" : 10,
+			"instrument" : "Xylophone",
+			"density" : 1,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 1,
+			"trackType" : 10,
+			"instrument" : "Acoustic Guitar (nylon)",
+			"density" : 2,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : true
+		}
+, 		{
+			"trackId" : 2,
+			"trackType" : 11,
+			"instrument" : "drum_126",
+			"density" : 2,
+			"selectedBars" : [ true, true, true, true ],
+			"resample" : true,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 3,
+			"trackType" : 10,
+			"instrument" : "FX 1 (rain)",
+			"density" : 2,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 4,
+			"trackType" : 10,
+			"instrument" : "Harpsichord",
+			"density" : 4,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 5,
+			"trackType" : 10,
+			"instrument" : "Celesta",
+			"density" : 5,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+, 		{
+			"trackId" : 6,
+			"trackType" : 10,
+			"instrument" : "Celesta",
+			"density" : 5,
+			"selectedBars" : [ false, false, false, false ],
+			"resample" : false,
+			"ignore" : false
+		}
+ ]
+}

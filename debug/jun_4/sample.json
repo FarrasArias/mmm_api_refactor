@@ -1,0 +1,13 @@
+{
+	"tracksPerStep" : 1,
+	"barsPerStep" : 2,
+	"modelDim" : 4,
+	"shuffle" : 1,
+	"percentage" : 83,
+	"temperature" : 1.11835682,
+	"batchSize" : 1,
+	"verbose" : 1,
+	"ckpt" : "/Users/bltzr/Documents/Max 8/Packages/MMM/source/projects/MMM.compose/MODELS/paper_bar_4.pt",
+	"encoder" : "TRACK_BAR_FILL_DENSITY_ENCODER",
+	"polyphonyHardLimit" : 5
+}

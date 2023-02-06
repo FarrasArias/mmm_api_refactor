@@ -1,0 +1,16 @@
+Mac OSX
+=================
+
+torch==1.6.0 via pip
+protobuf==3.15.8 via brew
+
+source build_api.sh
+
+Windows
+=================
+
+install torch==1.6.0 via pip
+install protobuf via vcpk
+
+(some commands in the shell script probably have to be adapted for Windows)
+source build_api.sh

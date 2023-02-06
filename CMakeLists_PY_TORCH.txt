@@ -1,0 +1,70 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.8.2 FATAL_ERROR)
+PROJECT(mmm_api)
+
+SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+SET(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+add_definitions(-DPYBIND=1)
+
+ADD_SUBDIRECTORY(pybind11)
+
+INCLUDE_DIRECTORIES(midifile/include)
+FILE(GLOB MIDIFILE_SRCS "midifile/src/*.cpp")
+FILE(GLOB MIDIFILE_HDRS "midifile/src/*.cpp")
+ADD_LIBRARY(midifile STATIC ${MIDIFILE_SRCS} ${MIDIFILE_HDRS})
+
+INCLUDE(FindProtobuf)
+FIND_PACKAGE(Protobuf REQUIRED)
+INCLUDE_DIRECTORIES(${Protobuf_INCLUDE_DIRS})
+#PROTOBUF_GENERATE_CPP(PROTO_SRC PROTO_HEADER src/mmm_api/protobuf/midi.proto)
+FILE(GLOB PROTO_DEF "src/mmm_api/protobuf/*.proto")
+PROTOBUF_GENERATE_CPP(PROTO_SRC PROTO_HEADER ${PROTO_DEF})
+ADD_LIBRARY(proto ${PROTO_HEADER} ${PROTO_SRC})
+
+FIND_PACKAGE(Torch REQUIRED)
+#message(STATUS "TORCH STUFF")
+#message(STATUS "${TORCH_LIBRARIES}")
+#torch;caffe2_library;/home/jeffe/anaconda3/envs/py37_torch/lib/python3.7/site-packages/torch/lib/libc10.so
+
+SET(TORCH_DIR "/usr/local/lib/python3.8/site-packages/torch")
+#SET(TORCH_DIR "/home/jeffe/HUGGING/lib/python3.6/site-packages/torch")
+INCLUDE_DIRECTORIES( "${TORCH_DIR}/include" )
+INCLUDE_DIRECTORIES( "${TORCH_DIR}/include/torch/csrc/api/include" )
+
+# LINK AGAINST DOWNLOADED TORCH
+
+#add_library(torch SHARED IMPORTED)
+#set_target_properties(torch PROPERTIES IMPORTED_LOCATION /home/jeffe/libtorch/lib/libtorch.so)
+#INCLUDE_DIRECTORIES(/home/jeffe/libtorch/include)
+#INCLUDE_DIRECTORIES(/home/jeffe/libtorch/include/torch/csrc/api/include)
+
+PYBIND11_ADD_MODULE(mmm_api 
+    src/mmm_api/lib.cpp
+    src/mmm_api/dataset/lz4.c 
+    src/mmm_api/protobuf/midi.pb.cc)
+
+#TARGET_LINK_LIBRARIES(mmm_api PRIVATE midifile proto "${Protobuf_LIBRARIES}"
+#    /home/jeffe/libtorch/lib/libtensorpipe_agent.so
+#    /home/jeffe/libtorch/lib/libshm.so
+#    /home/jeffe/libtorch/lib/libjitbackend_test.so
+#    /home/jeffe/libtorch/lib/libtorch_cpu.so
+#    /home/jeffe/libtorch/lib/libtorch_global_deps.so
+#    /home/jeffe/libtorch/lib/libcaffe2_module_test_dynamic.so
+#    /home/jeffe/libtorch/lib/libprocess_group_agent.so
+#    /home/jeffe/libtorch/lib/libcaffe2_observers.so
+#    /home/jeffe/libtorch/lib/libcaffe2_detectron_ops_gpu.so
+#    /home/jeffe/libtorch/lib/libc10d_cuda_test.so
+#    /home/jeffe/libtorch/lib/libtorch_cuda.so
+#    /home/jeffe/libtorch/lib/libnvrtc-builtins.so
+#    /home/jeffe/libtorch/lib/libtorchbind_test.so
+#    /home/jeffe/libtorch/lib/libtorch.so
+#    /home/jeffe/libtorch/lib/libc10.so
+#    /home/jeffe/libtorch/lib/libtorch_python.so
+#    /home/jeffe/libtorch/lib/libc10_cuda.so
+#    /home/jeffe/libtorch/lib/libcaffe2_nvrtc.so
+#)
+
+TARGET_LINK_LIBRARIES(mmm_api PRIVATE midifile proto "${Protobuf_LIBRARIES}" "${TORCH_LIBRARIES}")
+
+#TARGET_LINK_LIBRARIES(mmm_api PRIVATE midifile libprotobuf "${TORCH_LIBRARIES}")

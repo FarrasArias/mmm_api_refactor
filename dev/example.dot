@@ -1,0 +1,17 @@
+digraph graphname {
+    bar -> time_delta
+    bar -> note_onset
+    bar -> bar_end
+    note_onset -> time_delta
+    note_onset -> note_onset
+    note_onset -> bar_end
+    note_offset -> time_delta
+    note_offset -> note_onset
+    note_offset -> note_offset
+    note_offset -> bar_end
+    time_delta -> time_delta
+    time_delta -> note_onset
+    time_delta -> note_offset
+    time_delta -> bar_end
+    bar_end -> bar
+}
